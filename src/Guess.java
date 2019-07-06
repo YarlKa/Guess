@@ -9,6 +9,12 @@ public class Guess {
             ch = (char) System.in.read();
 
             if (ch == answer) System.out.println("** You guessed it! **");
-            else System.out.println("... Sorry, you didn't guess :-(");
+            else {
+                System.out.println("... Sorry, you didn't guess :-(");
+                if (ch < answer)
+                    System.out.println("near the end of the alphabet");
+                else
+                    System.out.println("closer to the beginning of the alphabet");
+            }
         }
     }
